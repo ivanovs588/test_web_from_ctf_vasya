@@ -1,0 +1,41 @@
+<html>
+
+
+	<head>
+		<meta charset = "utf-8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='task.css') }}">
+        <script type="text/javascript" src ="{{ url_for('static', filename='task.js') }}"></script>
+	<title>
+	Crypto | simple | task | 2
+	</title>
+	</head>
+
+	<div class="huge">
+		<header class="header">
+		</header>
+		<div class="whitespace"></div>
+		<div class="main">
+			<body>
+				<div class="title"><h2>Удачи в решении заданий. Главное, не забывайте включать свой мозг!</h2></div>
+				<div class="task">
+					<div class = "taskbox">
+					<div class = "task-header"><h3>Простой ASCII</h3></div>
+					<div class = "task-description"><p>Двигаемся дальше. Как вы знаете, компьютер видит все символы в двоичном коде, но чтобы людям было легче их читать, была придумана таблица ascii в десятичном варианте. В этой таблице записаны соответствия всех символов каким-либо числам. Как вы наверное уже догадались, теперь мы можем шифровать строки числами:</p><code class="task_text">205 229 32 242 224 234 32 243 230 32 232 32 241 235 238 230 237 238 44 32 237 229 32 239 240 224 226 228 224 32 235 232 32 63</code><p> опять же для расшифровки есть специальный <a href = "http://ascii.shadowservants.ru/" target="_blank">сайт</a>. Вводите ответ.</p></div>
+					<div class = "task-body"><form method= "post" class = "answer_textbox_form"><input type="text" autocomplete="off" placeholder="Введите ответ" id="answer_textbox" class ="answer_textbox" name= "answer_textbox"></form><h3 id="feedback"></h3></div>
+					</div>
+                    <form method="post" class ="buttons">
+                        <input onclick="check_if_correct()"  type="button" class="button" name="button_check" id = "button_check" value="Проверить ответ">
+                        <input onclick="go_back()" type="button" class="button" name="button_back" id= "button_back" value="Назад">
+                        <input style="visibility:hidden" onclick="go_forward()" type="button" class="button" id = "button_next_task" name="button_next_task" value="Следующее задание">
+                    </form>
+				</div>
+			</body>
+		</div>
+
+		<footer class="footer"></footer>
+	</div>
+<div id= "answer" class = "answer_section">{{answer}}</div>
+<div id = "task_number" class= "answer_section">{{tn}}</div>
+<div id = "tasks_amount" class= "answer_section">{{task_am}}</div>
+</html>
+

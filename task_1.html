@@ -1,0 +1,45 @@
+<html>
+
+
+	<head>
+		<meta charset = "utf-8">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mainpage.css') }}">
+        <script type="text/javascript" src ="{{ url_for('static', filename='task.js') }}"></script>
+	<title>
+    Crypto | asymmetry | task | 1
+	</title>
+	</head>
+
+	<div class="huge">
+		<header class="header">
+		</header>
+		<div class="whitespace"></div>
+		<div class="main">
+			<body>
+				<div class="title"><h1>Асимметричное шифрование</h1></div>
+                <section class = "mainpage_description">
+                    <p class="main_description_text">Асимметричное шифрование с открытым ключом базируется на следующих принципах:</p>
+    <ul>
+    <li><p class="main_description_text">Можно сгенерировать пару очень больших чисел (открытый ключ и закрытый ключ) так, чтобы, зная открытый ключ, нельзя было вычислить закрытый ключ за разумный срок. При этом механизм генерации является общеизвестным.</p></li>
+    <li><p class="main_description_text">Имеются надёжные методы шифрования, позволяющие зашифровать сообщение открытым ключом так, чтобы расшифровать его можно было только закрытым ключом. Механизм шифрования является общеизвестным.</p></li>
+    <li><p class="main_description_text">Владелец двух ключей никому не сообщает закрытый ключ, но передает открытый ключ контрагентам или делает его общеизвестным.</p></li>
+    </ul>
+        
+                    
+                </section>
+                <section class="theory">
+                    <p class="main_description_text">Если необходимо передать зашифрованное сообщение владельцу ключей, то отправитель должен получить открытый ключ. Отправитель шифрует свое сообщение открытым ключом и передает его получателю (владельцу ключей) по открытым каналам. При этом расшифровать сообщение не может никто, кроме владельца закрытого ключа.
+                        В результате можно обеспечить надёжное шифрование сообщений, сохраняя ключ расшифровки секретным для всех - даже для отправителей сообщений. </p>
+                        <input onclick="go_back()" type="button" class="button" name="button_back" id= "button_back" value="Назад">
+                </section>
+				
+				
+			</body>
+		</div>
+
+		<div class="footer"></div>
+	</div>
+<div id = "task_number" class= "answer_section">{{tn}}</div>
+<div id = "tasks_amount" class= "answer_section">{{task_am}}</div>
+</html>
+

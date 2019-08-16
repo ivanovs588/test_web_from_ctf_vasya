@@ -1,0 +1,45 @@
+<html>
+
+
+	<head>
+		<meta charset = "utf-8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='task.css') }}">
+        <script type="text/javascript" src ="{{ url_for('static', filename='task.js') }}"></script>
+	<title>
+	Crypto | simple | task | 4
+	</title>
+	</head>
+
+	<div class="huge">
+		<header class="header">
+		</header>
+		<div class="whitespace"></div>
+		<div class="main">
+			<body>
+				<div class="title"><h2>Удачи в решении заданий. Главное, не забывайте включать свой мозг!</h2></div>
+				<div class="task">
+					<div class = "taskbox">
+					<div class = "task-header"><h3>Как видит компьютер</h3></div>
+					<div class = "task-description"><p>Как многие догадались, в бинарном коде компьютера нет пробелов, да и вообще любых знаков, кроме нулей и единиц. Так как же ему понять, как делить свой код на части? Попробуйте разобраться сами</p><code class="task_text">01100110011011000110000101100111011110111101111100100000111100010
+                    01101111111001011100000111011010011000011100010111010111111111011110001111111000
+                    0100000111100000011000011100001001100000011011100110000111011000010011100100101010000000
+                    01001010010011101111101</code><p>Hint: в байте по 8 бит, а бит - это либо 1, либо 0</p></div>
+					<div class = "task-body"><form method= "post" class = "answer_textbox_form"><input type="text" autocomplete="off" placeholder="Введите ответ" id="answer_textbox" class ="answer_textbox" name= "answer_textbox"></form><h3 id="feedback"></h3></div>
+					</div>
+                    <form method="post" class ="buttons">
+                        <input onclick="check_if_correct()"  type="button" class="button" name="button_check" id = "button_check" value="Проверить ответ">
+                        <input onclick="go_back()" type="button" class="button" name="button_back" id= "button_back" value="Назад">
+                        <input style="visibility:hidden" onclick="go_forward()" type="button" class="button" id = "button_next_task" name="button_next_task" value="Следующее задание">
+                    </form>
+				</div>
+			</body>
+		</div>
+
+		<footer class="footer"></footer>
+	</div>
+<div id= "answer" class = "answer_section">{{answer}}</div>
+<div id = "task_number" class= "answer_section">{{tn}}</div>
+<div id = "tasks_amount" class= "answer_section">{{task_am}}</div>
+</html>
+
+
